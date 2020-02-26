@@ -1,6 +1,0 @@
-=========
-Wireshark
-=========
-
- 
-Wireshark, questo sconosciuto...

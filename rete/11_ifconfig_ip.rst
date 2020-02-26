@@ -1,12 +1,12 @@
-==========
-Qualcosina
-==========
+============
+ifconfig, ip
+============
 
 .. note::
 
     Prerequisti: **Raspberry, terminale linux**
     
-    Argomenti trattati: **DHCP, DNS, Indirizzamento IP**
+    Argomenti trattati: **Indirizzamento IP**
       
     
 .. Qui inizia il testo dell'esperienza

@@ -10,6 +10,27 @@ Esperienze di laboratorio
     
     Buon lavoro!
 
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Livello di Rete
+
+   rete/10_ipconfig
+   rete/11_ifconfig_ip
+   rete/20_ping
+   rete/30_arp
+   rete/40_traceroute
+   
+   
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Livello di Trasporto
+
+   trasporto/10_wireshark
+   trasporto/20_firewall
+   
+
 .. toctree::
    :maxdepth: 2
    :caption: Livello superiore
@@ -22,16 +43,3 @@ Esperienze di laboratorio
    superiore/31_RouterAccessPoint
    superiore/40_MAIL_test
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Livello di Trasporto
-
-   trasporto/01_firewall
-   
-.. toctree::
-   :maxdepth: 2
-   :caption: Livello di Rete
-
-   rete/01_qualcosina
-   rete/10_wireshark
-   
