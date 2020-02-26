@@ -1,6 +1,20 @@
 =====================
-Un sito sul Raspberry
+Sito web su Raspberry
 =====================
+
+
+.. note::
+
+    Prerequisti: **Raspberry, terminale linux**
+    
+    Argomenti trattati: **HTTP, URL**
+    
+    Linguaggi per il web introdotti: **HTML, CSS, PHP**
+
+    
+    
+.. Qui inizia il testo dell'esperienza
+
 
 Il nostro obiettivo è installare un server web su Raspberry. La scelta del software ricadrà ovviamente su Apache (https://www.apache.org).
 

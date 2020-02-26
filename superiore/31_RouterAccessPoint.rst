@@ -2,6 +2,16 @@
 Router Access Point
 ===================
 
+.. note::
+
+    Prerequisti: **Raspberry, terminale linux**
+    
+    Argomenti trattati: **DHCP, DNS, Indirizzamento IP**
+      
+    
+.. Qui inizia il testo dell'esperienza
+
+
 L'idea è quella di implementare un Access Point WIFI analogo a quelli che si hanno a casa per la connessione, con server DHCP e server DNS
 configurati manualmente.
 
