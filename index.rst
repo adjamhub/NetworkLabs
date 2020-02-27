@@ -28,7 +28,8 @@ Esperienze di laboratorio
    :caption: Livello di Trasporto
 
    trasporto/10_wireshark
-   trasporto/20_firewall
+   trasporto/20_netstat
+   trasporto/50_firewall
    
 
 .. toctree::
