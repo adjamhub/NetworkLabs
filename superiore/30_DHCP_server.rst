@@ -1,5 +1,5 @@
 ===========
-Server DHCP
+DHCP Server
 ===========
 
 .. note::

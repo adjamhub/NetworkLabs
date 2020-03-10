@@ -1,5 +1,5 @@
 ==========
-Server DNS
+DNS Server
 ==========
 
 
