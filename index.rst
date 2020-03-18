@@ -29,6 +29,7 @@ Esperienze di laboratorio
 
    trasporto/10_wireshark
    trasporto/20_netstat
+   trasporto/30_nmap
    trasporto/50_firewall
    
 
