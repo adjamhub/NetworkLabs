@@ -42,6 +42,7 @@ Esperienze di laboratorio
    superiore/11_sito_casa
    superiore/20_DNS_client
    superiore/21_DNS_server
+   superiore/22_DNS_dinamico
    superiore/30_DHCP_server
    superiore/31_AccessPointFaiDaTe
    superiore/40_MAIL_server
