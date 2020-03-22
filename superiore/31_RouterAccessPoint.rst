@@ -1,6 +1,6 @@
-===================
-Router Access Point
-===================
+======================
+Access Point Fai da te
+======================
 
 .. note::
 
@@ -95,7 +95,7 @@ Va impostato in questo modo, trovando le sezioni opportune:
 
     # dns configuration
     listen-address=192.168.0.1
-    server=1.1.1.1 8.8.8.8 9.9.9.9
+    server=1.1.1.1
     domain-needed
     bogus-priv
 
