@@ -44,5 +44,6 @@ Esperienze di laboratorio
    superiore/21_DNS_server
    superiore/30_DHCP_server
    superiore/31_AccessPointFaiDaTe
-   superiore/40_MAIL_test
+   superiore/40_MAIL_server
+   superiore/41_Telnet_MAIL
 
