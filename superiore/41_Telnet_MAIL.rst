@@ -1,10 +1,10 @@
 =============
-Telnet Mail *
+Telnet e Mail
 =============
 
 .. note::
 
-    Prerequisti: **Windows, terminale**
+    Prerequisti: **OS, terminale**
     
     Argomenti trattati: **Telnet, SMTP, POP, IMAP**
       
@@ -12,149 +12,154 @@ Telnet Mail *
 .. Qui inizia il testo dell'esperienza
 
 
-TELNET e SMTP
+Introduzione
+============
+
+Telnet è un piccolo client da terminale, disponibile su ogni sistema operativo, che serve per simulare connessioni in chiaro a qualsiasi socket desideriamo.
+La sua utilità sta nel fatto che permette di *dialogare* con qualunque protocollo del livello superiore che utilizza
+testo semplice per le sua sintassi.
+
+A pensarci bene, tutti i protocolli del livello superiore che abbiamo studiato (o che studieremo) utilizzano dati codificati
+in ASCII, quindi... telnet può essere un semplice strumento per provare ad analizzarli!
+
+La sua sintassi è semplicissima:
+
+.. code:: bash
+
+    $ telnet HOST PORT
+    
+Da dopo l'avvenuta connessione bisogna scrivere.. nella lingua del servizio con cui vogliamo dialogare, ovvero bisogna usare le specifiche del protocollo!
 
 
-telnet: > telnet mx1.example.com smtp
+Telnet e SMTP
+=============
 
-telnet: Trying 192.0.2.2...
-telnet: Connected to mx1.example.com.
-telnet: Escape character is '^]'.
-server: 220 mx1.example.com ESMTP server ready Tue, 20 Jan 2004 22:33:36 +0200
+Per estrema semplicità simulerò semplicemente una connessione ad un MTA generico, di cui elenco le caratteristiche:
 
-client: HELO client.example.com
+- host: **scuola.lan**
 
-server: 250 mx1.example.com
+- porta: **25**
 
-client: MAIL from: <sender@example.com>
+- user1: **pippo**
 
-server: 250 Sender <sender@example.com> Ok
+- pass1: **attentialcane**
 
-client: RCPT to: <recipient@example.com>
+- user2: **ciccio**
 
-server: 250 Recipient <recipient@example.com> Ok
+- pass2: **pescegatto**
 
-client: DATA
+Tramite telnet l'utente *pippo* proverà ad inviare una mail all'utente *ciccio*. 
 
-server: 354 Ok Send data ending with <CRLF>.<CRLF>
 
-client: From: sender@example.com
-client: To: recipient@example.com
-client: Subject: Test message
-client: 
-client: This is a test message.
-client: .
+.. code:: bash
 
-server: 250 Message received: 20040120203404.CCCC18555.mx1.example.com@client.example.com
+    $ telnet scuola.lan 25
+    
+    ... risposta ...
 
-client: QUIT
+    HELO pippo
+    
+    ... risposta ...
 
-server: 221 mx1.example.com ESMTP server closing connection
+    MAIL FROM: pippo@scuola.lan
+    
+    ... risposta ...
 
+    RCPT TO: ciccio@scuola.lan
+    
+    ... risposta ...
+
+    DATA
+
+    ... risposta ...
+
+    Subject: Titolo
+    Una mail con testo qualsiasi che termina quando
+    andate a capo, scrivete un punto e riandate a capo.
+    .
+    
+    ... risposta ...
+
+    QUIT
+    
+
+Se avete scritto tutto bene (lo capite osservando le risposte) avete inviato una mail scrivendo *a mano* le istruzioni SMTP per l'MTA!!!
+Avete notato che non avete mai inserito la password???
+
+
+TELNET e IMAP
+=============
+
+Adesso proviamo a consultare la mail dell'utente *ciccio* per trovare la mail che ha ricevuto. Facciamo prima con IMAP così il messaggio rimane
+sul server e proviamo successivamente provare con POP ;)
+
+
+.. code:: bash
+
+    $ telnet scuola.lan 143
+
+    ... risposta ...
+    
+    a1 LOGIN ciccio pescegatto
+    
+    ... risposta ad a1 ...
+
+    a2 LIST "" "*"
+
+    ... risposta ad a2 ...
+    
+    a3 EXAMINE INBOX
+
+    ... risposta ad a3 ...
+    
+    a4 FETCH 1 BODY[]
+
+    ... risposta ad a4 ...
+
+    a5 LOGOUT
+
+
+Ecco qua! Avanti...
 
 
 
 TELNET e POP3
+=============
+
+Adesso proviamo a consultare la mail dell'utente *ciccio* con POP, cancellando il messaggio alla fine della consultazione.
 
 
-telnet: > telnet pop.example.com pop3
+.. code:: bash
 
-telnet: Trying 192.0.2.2...
-telnet: Connected to pop.example.com.
-telnet: Escape character is '^]'.
-server: +OK InterMail POP3 server ready.
+    $ telnet scuola.lan 110
 
-client: USER MyUsername
+    ... risposta ...
 
-server: +OK please send PASS command
+    USER ciccio
+    
+    ... risposta ...
 
-client: PASS MyPassword
+    PASS pescegatto
 
-server: +OK MyUsername is welcome here
+    ... risposta ...
 
-client: LIST
+    LIST
 
-server: +OK 1 messages
-server: 1 1801
-server: .
+    ... risposta ...
 
-client: RETR 1
+    RETR 1
 
-server: +OK 1801 octets
-server: Return-Path: sender@example.com
-server: Received: from client.example.com ([192.0.2.1])
-server:        by mx1.example.com with ESMTP
-server:        id <20040120203404.CCCC18555.mx1.example.com@client.example.com>
-server:        for <recipient@example.com>; Tue, 20 Jan 2004 22:34:24 +0200
-server: From: sender@example.com
-server: Subject: Test message
-server: To: recipient@example.com
-server: Message-Id: <20040120203404.CCCC18555.mx1.example.com@client.example.com>
-server: 
-server: This is a test message.
-server: .
+    ... risposta ...
 
-client: DELE 1
+    DELE 1
 
-server: +OK
+    ... risposta ...
 
-client: quit
+    QUIT
 
-server: +OK MyUsername InterMail POP3 server signing off.
-
-
-
-TELNET e IMAP
-
-
-telnet: > telnet imap.example.com imap
-
-telnet: Trying 192.0.2.2...
-telnet: Connected to imap.example.com.
-telnet: Escape character is '^]'.
-server: * OK Dovecot ready.
-
-client: a1 LOGIN MyUsername MyPassword
-
-server: a1 OK Logged in.
-
-client: a2 LIST "" "*"
-
-server: * LIST (\HasNoChildren) "." "INBOX"
-server: a2 OK List completed.
-
-client: a3 EXAMINE INBOX
-
-server: * FLAGS (\Answered \Flagged \Deleted \Seen \Draft)
-server: * OK [PERMANENTFLAGS ()] Read-only mailbox.
-server: * 1 EXISTS
-server: * 1 RECENT
-server: * OK [UNSEEN 1] First unseen.
-server: * OK [UIDVALIDITY 1257842737] UIDs valid
-server: * OK [UIDNEXT 2] Predicted next UID
-server: a3 OK [READ-ONLY] Select completed.
-
-client: a4 FETCH 1 BODY[]
-
-server: * 1 FETCH (BODY[] {405}
-server: Return-Path: sender@example.com
-server: Received: from client.example.com ([192.0.2.1])
-server:         by mx1.example.com with ESMTP
-server:         id <20040120203404.CCCC18555.mx1.example.com@client.example.com>
-server:         for <recipient@example.com>; Tue, 20 Jan 2004 22:34:24 +0200
-server: From: sender@example.com
-server: Subject: Test message
-server: To: recipient@example.com
-server: Message-Id: <20040120203404.CCCC18555.mx1.example.com@client.example.com>
-server: 
-server: This is a test message.
-server: )
-server: a4 OK Fetch completed.
-
-client: a5 LOGOUT
-
-server: * BYE Logging out
-server: a5 OK Logout completed.
+    
+Come avete intuito leggendo i comandi, vi siete connessi al server POP con le credenziali di *ciccio*, avete elencato i suoi messaggi,
+avete letto (e poi cancellato) il messaggio numero 1. 
 
 
 
