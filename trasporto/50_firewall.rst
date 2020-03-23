@@ -1,6 +1,6 @@
-========
-Firewall
-========
+==========
+Firewall *
+==========
 
 .. note::
 
@@ -13,3 +13,5 @@ Firewall
 
 
 Gestione del traffico di rete
+
+Linux OPPURE FreeBSD???

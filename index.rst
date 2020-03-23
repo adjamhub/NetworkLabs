@@ -20,7 +20,7 @@ Esperienze di laboratorio
    rete/20_ping
    rete/30_arp
    rete/40_traceroute
-   
+   rete/50_router_DIY
    
 
 .. toctree::
@@ -40,11 +40,12 @@ Esperienze di laboratorio
    
    superiore/10_server_web
    superiore/11_sito_casa
+   superiore/12_telnet_HTTP
    superiore/20_DNS_client
    superiore/21_DNS_server
    superiore/22_DNS_dinamico
    superiore/30_DHCP_server
-   superiore/31_AccessPointFaiDaTe
+   superiore/31_AccessPoint_DIY
    superiore/40_MAIL_server
    superiore/41_Telnet_MAIL
 
