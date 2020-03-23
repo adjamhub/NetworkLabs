@@ -1,56 +1,66 @@
-===============
-Telnet e HTTP *
-===============
+=============
+Telnet e HTTP
+=============
 
 .. note::
 
-    Prerequisti: **Windows, terminale**
+    Prerequisti: **OS, terminale**
     
-    Argomenti trattati: **HTTP**
-
+    Argomenti trattati: **Telnet, HTTP**
+      
     
 .. Qui inizia il testo dell'esperienza
 
 
+Introduzione
+============
+
+Telnet è un piccolo client da terminale, disponibile su ogni sistema operativo, che serve per simulare connessioni in chiaro a qualsiasi socket desideriamo.
+La sua utilità sta nel fatto che permette di *dialogare* con qualunque protocollo del livello superiore che utilizza
+testo semplice per le sua sintassi.
+
+A pensarci bene, tutti i protocolli del livello superiore che abbiamo studiato (o che studieremo) utilizzano dati codificati
+in ASCII, quindi... telnet può essere un semplice strumento per provare ad analizzarli!
+
+La sua sintassi è semplicissima:
+
+.. code:: bash
+
+    $ telnet HOST PORT
+    
+Da dopo l'avvenuta connessione bisogna scrivere.. nella lingua del servizio con cui vogliamo dialogare, ovvero bisogna usare le specifiche del protocollo!
 
 
 
 TELNET e HTTP
+=============
 
+Praticamente con telnet ci colleghiamo ad un server HTTP e poi possiamo provare a scrivere a mano una richiesta HTTP. Nell'esempio proviamo a connetterci 
+al generico sito **www.esempio.com** e a chiedere la homepage con una richiesta GET.
 
-telnet: > telnet www.example.com http
+.. code:: bash
 
-telnet: Trying 192.0.2.2...
-telnet: Connected to www.example.com.
-telnet: Escape character is '^]'.
+    $ telnet www.esempio.com 80
 
-client: HEAD /example/example.shtml HTTP/1.1
-client: Host: www.example.com
-client: Connection: close
-client: 
+    ... risposta ...
+    
+    GET / HTTP/1.1
+    Host: www.esempio.com
 
-server: HTTP/1.1 200 OK
-server: Date: Wed, 21 Jan 2004 22:13:05 GMT
-server: Server: Apache/1.3.12-Turbo
-server: Connection: close
-server: Content-Type: text/html
+    ... risposta ...
+    HTTP/1.1 200 OK
+    Date: Wed, 21 Jan 2004 22:13:05 GMT
+    Server: Apache/1.3.12-Turbo
+    Content-Type: text/html
+    <html>
+    <head>
+    <title>Esempio</title>
+    </head>
+    <body>
+    <h1>Esempio</h1>
+    Hai capito?
+    </body>
+    <html>
 
-// ---------------------------------------------------------------------------------------------------------
-
-telnet: > telnet www.example.com http
-
-telnet: Trying 192.0.2.2...
-telnet: Connected to www.example.com.
-telnet: Escape character is '^]'.
-
-client:  GET / HTTP/1.1
-client: Host: www.example.com
-client: Connection: close
-client: 
-
-server: HTTP/1.1 200 OK
-server: Date: Wed, 21 Jan 2004 22:13:05 GMT
-server: Server: Apache/1.3.12-Turbo
-server: Connection: close
-server: Content-Type: text/html
+Tutto qui... semplice, ma efficace! Secondo me, anche molto affascinante.
 
