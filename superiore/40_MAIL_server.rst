@@ -79,7 +79,6 @@ Per impostare FQDN come desiderato, eseguiamo i seguenti compiti:
     $ sudo nano /etc/hosts
 
     127.0.0.1       localhost
-
     127.0.1.1       raspberrypi.scuola.lan  raspberrypi
     
 
