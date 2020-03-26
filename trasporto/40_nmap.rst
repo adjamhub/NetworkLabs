@@ -37,6 +37,16 @@ Ricorda comunque che la scansione che nnap esegue richiede del tempo quindi occh
 
 Le **OPTIONS** disponibili sono tranquillamente un migliaio... noi qui ovviamente noi vediamo le più semplici e interessanti:
 
+.. tip:: 
+
+    nmap è un software molto *veloce* considerato quello che fa e come lo fa.
+    
+    Il problema è che impiega comunque un buon minuto per una scansione, quindi agli occhi
+    delle persone normali risulta *lentissimo*.
+    
+    Fra le opzioni ne abbiamo anche una per la velocità: **-T4**. Spargetela un pò dove capita per velocizzare
+    le operazioni di scansione!
+
 
 L'opzione più veloce di scansione controlla solo le 100 porte più comuni:
 
@@ -69,25 +79,26 @@ Se si hanno privilegi amministrativi è meglio procedere ad un SYN scan (più di
     pacchetto SYN+ACK, ma **non** risponde con un ACK ad esso, non aprendo la connessione sul target!
 
 
-Per determinare sistema operativo e servizi attivi dei dispositivi target:
-
-.. code:: bash
-
-    $ nmap -A HOST
-
-
-Per risparmiarsi la scansione del sistema operativo e andare in cerca solo dei servizi Standard:
+Le due precedenti scansioni ci elencano semplicemente le porte che rispondono o no al 3 way handshake.
+Per determinare i servizi realmente attivi dietro alle porte attive:
 
 .. code:: bash
 
     $ nmap -sV TARGET
 
     
-Per la scansione del solo sistema operativo:
+Per cercare di capire il sistema operativo del dispositivo target (richiede privilegi amministrativi):
 
 .. code:: bash
 
     $ sudo nmap -O TARGET
+
+
+Per una scansione *generica* di quale potrebbe essere il sistema operativo e i servizi attivi:
+
+.. code:: bash
+
+    $ nmap -A HOST
 
 
 Se si vuole capire quali sono gli host online in una rete:
