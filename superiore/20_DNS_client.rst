@@ -142,7 +142,7 @@ essere risolto per ottenere l'indirizzo IP.
 
 
 .. code:: bash
-
+    
     $ nslookup
     
     (chiedo di risolvere record MX)

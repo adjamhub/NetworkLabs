@@ -44,8 +44,11 @@ Le **OPTIONS** disponibili sono tranquillamente un migliaio... noi qui ovviament
     Il problema è che impiega comunque un buon minuto per una scansione, quindi agli occhi
     delle persone normali risulta *lentissimo*.
     
-    Fra le opzioni ne abbiamo anche una per la velocità: **-T4**. Spargetela un pò dove capita per velocizzare
-    le operazioni di scansione!
+    Fra le opzioni ne abbiamo anche una per la velocità, con 5 possibilità: 
+    **-T0 (più lento ed accurato), -T1, -T2, -T3, -T4, -T5 (più veloce e potenzialmente impreciso)**. 
+    
+    Sta a voi decidere se e quale usare se l'attesa diventa insopportabile :)
+    
 
 
 L'opzione più veloce di scansione controlla solo le 100 porte più comuni:
@@ -115,7 +118,7 @@ Quando nmap scansiona le porte logiche di un dispositivo TARGET può ritornare r
 
 ===================== ===========================================================================
 Classificazione Porta Descrizione
---------------------- ---------------------------------------------------------------------------
+===================== ===========================================================================
 open                  Una porta che accetta connessioni
 --------------------- ---------------------------------------------------------------------------
 closed                Accessibile ma senza una applicazione in ascolto su di essa.
@@ -131,3 +134,141 @@ open|filtered         nmap è indeciso fra i 2 stati, ma è sicuro sia uno dei d
 --------------------- ---------------------------------------------------------------------------
 closed|filtered       nmap è indeciso fra i 2 stati, ma è sicuro sia uno dei due.
 ===================== ===========================================================================
+
+
+
+
+Nmap Scripting Engine (NSE)
+===========================
+
+.. warning::
+
+    Da un grande potere deriva una grande responsabilità
+    
+    *(zio Ben)*
+
+La caratteristica migliore di nmap è la possibilità di aumentare a dismisura le sue capacità di scanning grazie al meccanismo degli script e al suo NSE ovvero
+il software in grado di eseguirli.
+
+Sono presenti centinaia di script per le scansioni più disparate, organizzati nelle seguenti categorie:
+
+
+=============== ===========================================================================
+Categoria       Descrizione
+=============== ===========================================================================
+auth 	        Script per l'autenticazione e i privilegi utente.
+broadcast 	    Network discovery basato su broadcast.
+brute 	        Attacchi di tipo brute-force per indovinare le credenziali di accesso.
+default         Gli script più popolari e considerati più utili.
+discovery 	    Network, Service and Host discovery
+dos             Attacchi di tipo \\"Denial of service\\"
+exploit 	    Service exploitation on different CVEs
+external        Scripts che si appoggiano a servizi o dati esterni per funzionare
+fuzzer 	        Attacchi di tipo *fuzzing* ad app, servizi, reti.
+intrusive 	    Attacchi aggressivi che potrebbero danneggiare il funzionamento della rete.
+malware 	    Malware detections and exploration scripts
+safe 	        Safe and non-intrusive/noisy scripts
+version 	    OS, service and software detection scripts
+vuln 	        Vulnerability detection and exploitation scripts
+=============== ===========================================================================
+
+
+Viste le categorie complete, sappiate che un elenco completo degli script disponibili con una descrizione esplicativa accanto si trova sul sito https://nmap.org/nsedoc/.
+
+Per quanto riguarda il nostro corso, diciamo che prima di poter utilizzare gli script è bene assicurarsi che essi siano presenti, aggiornati all'ultima versione
+disponibile e catalogati nel database del sistema. Si ottiene questo risultato eseguendo il comando:
+
+.. code:: bash
+
+    $ sudo nmap --script-updatedb
+    
+Fatto questo, la sintassi per eseguire gli script è molto semplice e si basa sull'opzione *--script*: ho fatto alcuni esempi per capire il funzionamento.
+
+.. code:: bash
+
+    // SINTASSI GENERALE
+    $ sudo nmap --script=QUALCOSINA TARGET
+    
+    // Per eseguire tutti gli script di default verso un TARGET 
+    sudo nmap --script=default TARGET
+    
+    // Per eseguire gli script dei gruppi broadcast e discovery verso un TARGET
+    sudo nmap --script=broadcast,discovery TARGET
+    
+    // come sopra, esattamente equivalente
+    sudo nmap --script="broadcast or discovery" TARGET
+    
+    // Per eseguire tutti gli script relativi ad HTTP verso un target
+    sudo nmap --script=http* TARGET
+
+    // Per eseguire lo script chiamato dhcp-discover verso un target
+    sudo nmap --script=dhcp-discover TARGET
+
+    // Per eseguire solo gli script relativi ad HTTP del gruppo discovery verso un target
+    sudo nmap --script="http* and discovery" TARGET
+
+
+
+Esempi ed Esercizi
+==================
+
+
+Nel primo esempio proveremo ad interrogare il server DHCP per ottenere le informazioni di rete,
+fingendo di essere un client DHCP (con un MAC inventato) e visualizzando le informazioni ottenute
+senza realmente applicarle.
+
+.. code:: bash
+
+    // l'opzione -sU indirizza la scansione sul protocollo UDP
+    // l'opzione -p 67 individua la porta del server DHCP: velocizza la scansione
+    // lo script si chiama dhcp-discover
+    $ sudo nmap -sU -p 67 --script dhcp-discover IP_SERVER_DHCP
+
+
+Nel secondo esempio proviamo ad elencare le cartelle condivise da un generico PC con Windows, per
+ottenere informazioni su cartelle condivise eventualmente accessibili.
+
+.. code:: bash
+
+    // opzione (-sU) per scansione UDP, opzione (-sS) per scansione TCP SYN
+    // Le porte elencate (137/udp e 139/tcp) servono per velocizzare le operazioni
+    // lo script si chiama smb-enum-shares
+    $ sudo nmap -sU -sS -p U:137,T:139 --script smb-enum-shares IP_SERVER_SMB
+
+
+Nel terzo esempio proviamo ad ottenere informazioni dettagliate sul PC Windows che ci interessa
+studiare.
+
+.. code:: bash
+
+    // opzione (-sU) per scansione UDP, opzione (-sS) per scansione TCP SYN
+    // Le porte elencate (137/udp e 139/tcp) servono per velocizzare le operazioni
+    // lo script si chiama smb-system-info
+    $ sudo nmap -sU -sS -p U:137,T:139 --script smb-system-info IP_SERVER_SMB
+
+
+Nel quarto esempio faremo fare a nmap una scansione tipo traceroute di tutti gli hop attraversati 
+con la localizzazione geografica delle posizioni di ognuna.
+
+.. code:: bash
+
+    $ sudo nmap --traceroute --script traceroute-geolocation TARGET
+
+    
+Nel quinto esempio simuleremo un attacco (di 10 minuti) ad un server DNS allo scopo di testare
+la qualità della rete e del servizio DNS di quest'ultima. Attenzione...
+
+.. code:: bash
+
+    $ sudo nmap -sU --script dns-fuzz TARGET
+
+
+Nel sesto e ultimo esempio utilizzeremo uno script di tipo brute per tentare di indovinare nome
+utente e password di un utente collegato ad un Mac. Anche questo script ha ovviamente l'unico scopo
+di scoraggiare l'utilizzo di nomi utente e password semplici da indovinare.
+
+.. code:: bash
+
+    $ sudo nmap -p 548 --script afp-brute IP_COMPUTER_MAC
+
+
