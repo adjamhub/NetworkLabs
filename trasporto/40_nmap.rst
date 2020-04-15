@@ -12,8 +12,8 @@ nmap
 .. Qui inizia il testo dell'esperienza
 
 
-Nmap è un software libero distribuito con licenza GNU GPL da Insecure.org (https://insecure.org) creato per effettuare port scanning, 
-cioè mirato all'individuazione di porte aperte su un computer bersaglio o anche su range di indirizzi IP, in modo da determinare quali servizi di rete siano disponibili. 
+Nmap è un software libero distribuito con licenza GNU GPL da Insecure.org (https://insecure.org) e disponibile per il download sul sito https://nmap.org/ 
+creato per effettuare port scanning, cioè mirato all'individuazione di porte aperte su un computer bersaglio o anche su range di indirizzi IP, in modo da determinare quali servizi di rete siano disponibili. 
 
 Vediamo la sintassi di base:
 
@@ -187,25 +187,25 @@ Fatto questo, la sintassi per eseguire gli script è molto semplice e si basa su
 .. code:: bash
 
     // SINTASSI GENERALE
-    $ sudo nmap --script=QUALCOSINA TARGET
+    $ sudo nmap --script QUALCOSINA TARGET
     
     // Per eseguire tutti gli script di default verso un TARGET 
-    sudo nmap --script=default TARGET
+    sudo nmap --script default TARGET
     
     // Per eseguire gli script dei gruppi broadcast e discovery verso un TARGET
-    sudo nmap --script=broadcast,discovery TARGET
+    sudo nmap --script broadcast,discovery TARGET
     
     // come sopra, esattamente equivalente
-    sudo nmap --script="broadcast or discovery" TARGET
+    sudo nmap --script "broadcast or discovery" TARGET
     
     // Per eseguire tutti gli script relativi ad HTTP verso un target
-    sudo nmap --script=http* TARGET
+    sudo nmap --script http* TARGET
 
     // Per eseguire lo script chiamato dhcp-discover verso un target
-    sudo nmap --script=dhcp-discover TARGET
+    sudo nmap --script dhcp-discover TARGET
 
     // Per eseguire solo gli script relativi ad HTTP del gruppo discovery verso un target
-    sudo nmap --script="http* and discovery" TARGET
+    sudo nmap --script "http* and discovery" TARGET
 
 
 
