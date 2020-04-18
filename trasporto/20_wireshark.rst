@@ -19,6 +19,7 @@ Vedremo qui semplicemente una minima parte delle funzioni più importanti, come 
 
 Per prima cosa occorre selezionare l'interfaccia di rete dalla quale si vogliono catturare i pacchetti in transito. Questa operazione attiverà la scheda in modalità “promiscua”, cioè la renderà capace di intercettare tutti i pacchetti in transito sulla rete e non solo quelli destinati all'host. 
 
+
 .. image:: images/wireshark_NIC_selection.jpg
 
 
@@ -33,8 +34,9 @@ Come si deve, il colpo d'occhio è chiaro e semplice: i pacchetti sniffati sono 
 
 Tra le *funzioni utili* di WireShark, elenchiamo le due più usate:
 
+
 #. L'opzione **follow X Stream** dove X è uno tra TCP e UDP, permette di evidenziare il flusso di una comunicazione a cui il pacchetto selezionato appartiene. 
-In questo modo si esce dall'ordinamento classico “per cattura” e si ottiene una lista di tutti i pacchetti relativi ad una connessione.
+   In questo modo si esce dall'ordinamento classico “per cattura” e si ottiene una lista di tutti i pacchetti relativi ad una connessione.
 
 #. L'opzione **filtra pacchetti** permette una selezione dei pacchetti interessanti secondo un modello prestabilito.
 

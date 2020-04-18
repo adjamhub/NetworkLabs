@@ -40,7 +40,7 @@ Vediamo le opzioni:
 
 ============================= ==========================================================================
 Opzione                       Significato
------------------------------ --------------------------------------------------------------------------
+============================= ==========================================================================
 -a                            Visualizza la cache ARP
 -s indirizzo_IP indirizzo_MAC Inserisce la coppia IP:MAC nella cache ARP
 -d indirizzo_IP               Elimina la voce corrispondente a indirizzo_IP dalla cache ARP

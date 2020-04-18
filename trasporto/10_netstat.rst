@@ -22,7 +22,7 @@ Vediamo le principali opzioni:
 
 =================== ======================= ==========================================================================
 Opzione per Windows Opzione per Linux e Mac Significato
-------------------- ----------------------- --------------------------------------------------------------------------
+=================== ======================= ==========================================================================
 -a                  -a                      Visualizza tutte le connessioni, attive e non
 -n                  -n                      Visualizza i dati (IP e porta) in forma numerica, senza risoluzione
 -o                  -p                      Visualizza il PID (identificatore) del processo che occupa quella porta

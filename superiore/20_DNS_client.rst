@@ -1,3 +1,7 @@
+.. |br| raw:: html
+
+    <br>
+
 ===========
 DNS Clients
 ===========
@@ -85,10 +89,10 @@ la modalità interattiva permette inoltre di fornire alcuni parametri ad nskooup
 
 =================== ======================================================================================
 comando             descrizione
-------------------- --------------------------------------------------------------------------------------
+=================== ======================================================================================
 host                l'host da risolvere.
 server ip           l'ip del server DNS da utilizzare nelle prossime risoluzioni interattive
-set type=record     serve per richiedere la risoluzione del tipo di record indicato.
+set type=record     serve per richiedere la risoluzione del tipo di record indicato. |br|
                     Valori possibili per *record* sono: A, AAAA, CNAME, MX, NS, PTR ...
 =================== ======================================================================================
 

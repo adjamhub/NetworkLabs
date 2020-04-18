@@ -40,7 +40,7 @@ Indico qua le informazioni in modo tale che sia più semplice capire il funziona
 
 ====================== ===================
 Descrizione            Valore
----------------------- -------------------
+====================== ===================
 Rete                   10.0.0.0
 Subnet mask            255.255.255.0
 broadcast              10.255.255.255

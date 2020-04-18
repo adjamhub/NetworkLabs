@@ -31,7 +31,7 @@ E le opzioni degne di nota:
 
 ============= ==========================================================================
 Opzione       Significato
-------------- --------------------------------------------------------------------------
+============= ==========================================================================
 /all          Visualizza le informazioni complete su tutte le NIC installate nel sistema
 
 /release      Rilascia la configurazione di rete della NIC specificata

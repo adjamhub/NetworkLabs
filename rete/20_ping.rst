@@ -112,7 +112,7 @@ più alto riportato nei tre test e si valuta la rete secondo la seguente tabella
 
 ============== =============
 ping time (ms) velocità rete
--------------- -------------
+============== =============
  0 - 20        Ottima
 20 - 40        Buona
 40 - 60        Discreta

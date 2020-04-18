@@ -1,3 +1,7 @@
+.. |br| raw:: html
+
+    <br>
+
 ====
 nmap
 ====
@@ -121,13 +125,13 @@ Classificazione Porta Descrizione
 ===================== ===========================================================================
 open                  Una porta che accetta connessioni
 --------------------- ---------------------------------------------------------------------------
-closed                Accessibile ma senza una applicazione in ascolto su di essa.
+closed                Accessibile ma senza una applicazione in ascolto su di essa. |br|
                       Permette di capire che un sistema è attivo e senza firewall.
 --------------------- ---------------------------------------------------------------------------
-filtered              Non si può determinare con esattezza se la porta sia aperta o no.
+filtered              Non si può determinare con esattezza se la porta sia aperta o no. |br|
                       Le porte protette dai firewall sono così.
 --------------------- ---------------------------------------------------------------------------
-unfiltered            Una porta non protetta da firewall, ma che non si capisce se sia aperta
+unfiltered            Una porta non protetta da firewall, ma che non si capisce se sia aperta |br|
                       o meno. Un amministratore acuto si nasconde di solito dietro ad essa...
 --------------------- ---------------------------------------------------------------------------
 open|filtered         nmap è indeciso fra i 2 stati, ma è sicuro sia uno dei due.
