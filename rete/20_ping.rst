@@ -120,6 +120,7 @@ ping time (ms) velocità rete
 oltre 80       ...
 ============== =============
 
+
 .. warning::
     Questa tabella e questo modo di valutare la velocità di una rete hanno pochissime basi scientifiche e sono solo una stima
     di massima che io di solito faccio per valutare una rete.
