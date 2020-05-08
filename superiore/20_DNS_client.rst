@@ -37,7 +37,7 @@ Questa modalità è la più semplice e scarna. Si digita **nslookup HOST** e que
 fornito e termina
 
 
-.. code:: bash
+.. code::
 
     $ nslookup www.adjam.org
     Server:         172.104.237.57
@@ -59,7 +59,7 @@ interactive mode
 Per entrare in *interactive mode* basta digitare **nslookup** senza parametri od opzioni. In questo modo cambia il prompt (diventa un maggiore, **>**) e
 lì si può richiedere la risoluzione di qualunque host ci interessi. Quando abbiamo finito, possiamo uscire dalla modalità interattiva digitando **exit**.
 
-.. code:: bash
+.. code::
 
     $ nslookup
     
@@ -108,7 +108,7 @@ per le risoluzioni DNS fatte con nslookup in **questa** modalità interattiva! I
 e alla chiusura di nslookup neanche esso se ne ricorderà:
 
 
-.. code:: bash
+.. code::
 
     $ nslookup
     
@@ -145,18 +145,18 @@ Ricordo però che il record MX ci dirà praticamente il record A che individua i
 essere risolto per ottenere l'indirizzo IP.
 
 
-.. code:: bash
-    
+.. code::
+
     $ nslookup
     
     (chiedo di risolvere record MX)
     > set type=MX
     
-    (risolvo libero.it come MX. Il record punta all'host indicato sotto)
+    (risolvo libero.it come MX. Il record MX punta il record con host indicato sotto)
     > libero.it
     Server:         172.104.237.57
     Address:        172.104.237.57#53
-
+    
     Non-authoritative answer:
     libero.it       mail exchanger = 10 smtp-in.libero.it.
 
@@ -171,5 +171,3 @@ essere risolto per ottenere l'indirizzo IP.
     Non-authoritative answer:
     Name:   smtp-in.libero.it
     Address: 213.209.1.129
-
-

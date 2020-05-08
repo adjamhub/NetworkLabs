@@ -10,6 +10,12 @@ Esperienze di laboratorio
     
     Buon lavoro!
 
+.. tip::
+    Questa documentazione, oltre che usufruibile online, è disponibile in diversi formati: **PDF, ePUB, SingleHTML, etc.** Per scaricare il formato 
+    che preferite, accedete alla apposita finestra di selezione posizionata in basso nella barra laterale.
+    
+    Se ne scaricate una copia, abbiate cura di verificare che essa sia sempre aggiornata, confrontando la sua data di rilascio con quella del sito.
+
 
 .. toctree::
    :maxdepth: 2

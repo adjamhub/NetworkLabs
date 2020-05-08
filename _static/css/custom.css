@@ -5,7 +5,13 @@
 /* Allarga lo spazio del contenuto */
 .wy-nav-content {max-width:900px}
 
+/* colore di sfondo dei riquadri di codice */
+.highlight {background:#e8e8e8}
+
 /* più distanza tra i capitoli */
 h2 {padding-top:50px}
 h3 {padding-top:30px}
 h4 {padding-top:20px}
+
+/* justified text align */
+p {text-align:justify}
