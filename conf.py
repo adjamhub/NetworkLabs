@@ -10,15 +10,22 @@ import sys
 sys.path.insert(0, os.path.abspath('.'))
 import myrules
 
+import datetime
+# oggi instead of today: there is another variabile called "today"
+oggi = datetime.date.today()
+year = oggi.strftime("%Y")
+ver = oggi.strftime("%Y%m%d")
+
 # -- Project information -----------------------------------------------------
 
 project = 'Network Labs'
-copyright = '2020, Andrea Diamantini (CC0 1.0)'
+copyright = year + ', Andrea Diamantini. License: CC BY-NC-SA 4.0. Version: ' + ver + ". "
 author = 'Andrea Diamantini'
 
 # The full version, including alpha/beta/rc tags
-version = 'latest'
+version = ver
 release = 'latest'
+
 
 
 # -- General configuration ---------------------------------------------------
