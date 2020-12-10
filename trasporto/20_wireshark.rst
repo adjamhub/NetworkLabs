@@ -4,7 +4,7 @@ Wireshark
 
 .. note::
 
-    Prerequisti: **Windows**
+    Prerequisti: **Windows,Mac,Linux**
     
     Argomenti trattati: **Protocolli di rete e di trasporto. Più tutto il resto**
       
