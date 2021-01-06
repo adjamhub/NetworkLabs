@@ -12,7 +12,4 @@ Router fai da te *
 .. Qui inizia il testo dell'esperienza
 
 
-Qualcosina sul livello di rete... vedrai che appena mi ci metto la trovo :)
-
-
-.. image:: images/tracert.png
+Questo si riesce a fare solo in laboratorio... 

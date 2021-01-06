@@ -13,4 +13,4 @@ DNS Dinamico *
 .. Qui inizia il testo dell'esperienza
 
 
-Installiamo un server DNS su RPI
+Magari lo abbiniamo al port forwarding se si riesce a trovare una metodologia semplice per farlo fare a tutti..

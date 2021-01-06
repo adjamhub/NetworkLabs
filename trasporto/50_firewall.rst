@@ -12,6 +12,4 @@ Firewall *
 .. Qui inizia il testo dell'esperienza
 
 
-Gestione del traffico di rete
-
-Linux OPPURE FreeBSD???
+Va abbinato a router DIY. Vorrei provare con nftables.

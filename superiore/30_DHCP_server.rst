@@ -13,4 +13,12 @@ DHCP Server *
 
 
 
-Installiamo un server DHCP su RPI
+Installiamo un server DHCP su RPI. 
+
+Sinceramente non so quale è più semplice/utile/importante fare...
+
+* DHCPD
+* DNSMASQ
+* KEA
+
+Gli ultimi 2 vanno abbinati al DNS... mumble mumble...
