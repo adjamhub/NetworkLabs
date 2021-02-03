@@ -4,7 +4,7 @@ ifconfig, ip
 
 .. note::
 
-    Prerequisti: **Linux, Raspberry, MacOS, terminale**
+    Prerequisti: **Linux, MacOS: terminale**
     
     Argomenti trattati: **Indirizzamento IP**
       

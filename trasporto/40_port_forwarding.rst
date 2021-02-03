@@ -60,13 +60,17 @@ Da lì la configurazione è diversa per ogni router... posso aiutarvi poco :(
 
 Quello che dovete fare è abbinare i due socket che devono comunicare (quello sul dispositivo e quello sul router). 
 
+
 **IP del router : 80 -----> IP del PC/Raspberry : 80**
+
 
 Ricordate che siete sull'interfaccia del router, quindi il suo IP è solitamente implicito. 
 Resta da indicare la porta da ascoltare (nel nostro esempio la porta 80, HTTP) e il socket che la deve ricevere
 (IP del dispositivo, il PC o il Raspberry, e ancora porta 80 oppure porta HTTP).
 
+
 **Buona Fortuna!**
+
 
 PS: fortuna, un corno! Dovete riuscirci...
 

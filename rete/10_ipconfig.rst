@@ -4,7 +4,7 @@ ipconfig
 
 .. note::
 
-    Prerequisti: **Windows, command prompt**
+    Prerequisti: **Windows: command prompt**
     
     Argomenti trattati: **Indirizzamento IP**
       

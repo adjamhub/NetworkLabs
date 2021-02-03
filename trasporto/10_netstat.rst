@@ -4,7 +4,7 @@ netstat
 
 .. note::
 
-    Prerequisti: **Windows, Linux, Mac: linea di comando**
+    Prerequisti: **Windows: command prompt. Linux, Mac: terminale**
     
     Argomenti trattati: **Protocolli di trasporto**
       

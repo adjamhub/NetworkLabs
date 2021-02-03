@@ -57,6 +57,7 @@ Le **OPTIONS** disponibili sono tranquillamente un migliaio... noi qui ovviament
 
 L'opzione più veloce di scansione controlla solo le 100 porte più comuni:
 
+
 .. code:: bash
 
     $ nmap -F TARGET
@@ -64,12 +65,14 @@ L'opzione più veloce di scansione controlla solo le 100 porte più comuni:
     
 La scansione di default senza privilegi amministrativi viene fatta con il 3-way handshake (TCP scan):
 
+
 .. code:: bash
 
     $ nmap -sT HOST
 
 
 Se si hanno privilegi amministrativi è meglio procedere ad un SYN scan (più discreto e più veloce)
+
 
 .. code:: bash
 
@@ -89,12 +92,14 @@ Se si hanno privilegi amministrativi è meglio procedere ad un SYN scan (più di
 Le due precedenti scansioni ci elencano semplicemente le porte che rispondono o no al 3 way handshake.
 Per determinare i servizi realmente attivi dietro alle porte attive:
 
+
 .. code:: bash
 
     $ nmap -sV TARGET
 
     
 Per cercare di capire il sistema operativo del dispositivo target (richiede privilegi amministrativi):
+
 
 .. code:: bash
 
@@ -103,6 +108,7 @@ Per cercare di capire il sistema operativo del dispositivo target (richiede priv
 
 Per una scansione *generica* di quale potrebbe essere il sistema operativo e i servizi attivi:
 
+
 .. code:: bash
 
     $ nmap -A HOST
@@ -110,9 +116,11 @@ Per una scansione *generica* di quale potrebbe essere il sistema operativo e i s
 
 Se si vuole capire quali sono gli host online in una rete:
 
+
 .. code:: bash
 
     $ nmap -sn SUBNET
+
 
     
 Porte scansionate
@@ -160,20 +168,20 @@ Sono presenti centinaia di script per le scansioni più disparate, organizzati n
 =============== ===========================================================================
 Categoria       Descrizione
 =============== ===========================================================================
-auth 	        Script per l'autenticazione e i privilegi utente.
-broadcast 	    Network discovery basato su broadcast.
-brute 	        Attacchi di tipo brute-force per indovinare le credenziali di accesso.
+auth             Script per l'autenticazione e i privilegi utente.
+broadcast         Network discovery basato su broadcast.
+brute             Attacchi di tipo brute-force per indovinare le credenziali di accesso.
 default         Gli script più popolari e considerati più utili.
-discovery 	    Network, Service and Host discovery
+discovery         Network, Service and Host discovery
 dos             Attacchi di tipo \\"Denial of service\\"
-exploit 	    Service exploitation on different CVEs
+exploit         Service exploitation on different CVEs
 external        Scripts che si appoggiano a servizi o dati esterni per funzionare
-fuzzer 	        Attacchi di tipo *fuzzing* ad app, servizi, reti.
-intrusive 	    Attacchi aggressivi che potrebbero danneggiare il funzionamento della rete.
-malware 	    Malware detections and exploration scripts
-safe 	        Safe and non-intrusive/noisy scripts
-version 	    OS, service and software detection scripts
-vuln 	        Vulnerability detection and exploitation scripts
+fuzzer             Attacchi di tipo *fuzzing* ad app, servizi, reti.
+intrusive         Attacchi aggressivi che potrebbero danneggiare il funzionamento della rete.
+malware         Malware detections and exploration scripts
+safe             Safe and non-intrusive/noisy scripts
+version         OS, service and software detection scripts
+vuln             Vulnerability detection and exploitation scripts
 =============== ===========================================================================
 
 
@@ -182,11 +190,14 @@ Viste le categorie complete, sappiate che un elenco completo degli script dispon
 Per quanto riguarda il nostro corso, diciamo che prima di poter utilizzare gli script è bene assicurarsi che essi siano presenti, aggiornati all'ultima versione
 disponibile e catalogati nel database del sistema. Si ottiene questo risultato eseguendo il comando:
 
+
 .. code:: bash
 
     $ sudo nmap --script-updatedb
-    
+
+        
 Fatto questo, la sintassi per eseguire gli script è molto semplice e si basa sull'opzione *--script*: ho fatto alcuni esempi per capire il funzionamento.
+
 
 .. code:: bash
 
@@ -221,6 +232,7 @@ Nel primo esempio proveremo ad interrogare il server DHCP per ottenere le inform
 fingendo di essere un client DHCP (con un MAC inventato) e visualizzando le informazioni ottenute
 senza realmente applicarle.
 
+
 .. code:: bash
 
     // l'opzione -sU indirizza la scansione sul protocollo UDP
@@ -231,6 +243,7 @@ senza realmente applicarle.
 
 Nel secondo esempio proviamo ad elencare le cartelle condivise da un generico PC con Windows, per
 ottenere informazioni su cartelle condivise eventualmente accessibili.
+
 
 .. code:: bash
 
@@ -243,6 +256,7 @@ ottenere informazioni su cartelle condivise eventualmente accessibili.
 Nel terzo esempio proviamo ad ottenere informazioni dettagliate sul PC Windows che ci interessa
 studiare.
 
+
 .. code:: bash
 
     // opzione (-sU) per scansione UDP, opzione (-sS) per scansione TCP SYN
@@ -254,6 +268,7 @@ studiare.
 Nel quarto esempio faremo fare a nmap una scansione tipo traceroute di tutti gli hop attraversati 
 con la localizzazione geografica delle posizioni di ognuna.
 
+
 .. code:: bash
 
     $ sudo nmap --traceroute --script traceroute-geolocation TARGET
@@ -261,6 +276,7 @@ con la localizzazione geografica delle posizioni di ognuna.
     
 Nel quinto esempio simuleremo un attacco (di 10 minuti) ad un server DNS allo scopo di testare
 la qualità della rete e del servizio DNS di quest'ultima. Attenzione...
+
 
 .. code:: bash
 
@@ -271,8 +287,7 @@ Nel sesto e ultimo esempio utilizzeremo uno script di tipo brute per tentare di 
 utente e password di un utente collegato ad un Mac. Anche questo script ha ovviamente l'unico scopo
 di scoraggiare l'utilizzo di nomi utente e password semplici da indovinare.
 
+
 .. code:: bash
 
     $ sudo nmap -p 548 --script afp-brute IP_COMPUTER_MAC
-
-

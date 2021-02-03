@@ -4,7 +4,7 @@ traceroute
 
 .. note::
 
-    Prerequisti: **Windows, Raspberry, linea di comando**
+    Prerequisti: **Windows: command prompt. Linux, Mac: terminale**
     
     Argomenti trattati: **Protocolli IP, ICMP. Routing**
       
@@ -31,7 +31,7 @@ Immagine dell'esecuzione di **tracert su Windows**.
 .. image:: images/tracert.png
 
 
-Immagine dell'esecuzione di **traceroute su Linux**.
+Immagine dell'esecuzione di **traceroute su Linux o Mac**.
 
 .. image:: images/traceroute.jpg
 

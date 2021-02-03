@@ -4,7 +4,7 @@ Wireshark
 
 .. note::
 
-    Prerequisti: **Windows,Mac,Linux**
+    Prerequisti: **Windows, Mac, Linux**
     
     Argomenti trattati: **Protocolli di rete e di trasporto. Più tutto il resto**
       
@@ -12,12 +12,14 @@ Wireshark
 .. Qui inizia il testo dell'esperienza
 
  
-WireShark è un analizzatore di rete molto diffuso e molto potente, appartenente alla classe degli sniffer di rete. Usarlo tuttavia, almeno per operazioni di base o di studio del funzionamento della rete, è relativamente semplice.
+WireShark è un analizzatore di rete molto diffuso e molto potente, appartenente alla classe degli sniffer di rete. 
+Usarlo tuttavia, almeno per operazioni di base o di studio del funzionamento della rete, è relativamente semplice.
 
-Vedremo qui semplicemente una minima parte delle funzioni più importanti, come la cattura dei pacchetti, la selezione di questi ultimi per mezzo dei filtri e alcune funzioni che tornano comode soprattutto quando c'è una grossa mole di dati.
+Vedremo qui semplicemente una minima parte delle funzioni più importanti, come la cattura dei pacchetti, la selezione di questi ultimi per mezzo dei filtri 
+e alcune funzioni che tornano comode soprattutto quando c'è una grossa mole di dati.
 
-
-Per prima cosa occorre selezionare l'interfaccia di rete dalla quale si vogliono catturare i pacchetti in transito. Questa operazione attiverà la scheda in modalità “promiscua”, cioè la renderà capace di intercettare tutti i pacchetti in transito sulla rete e non solo quelli destinati all'host. 
+Per prima cosa occorre selezionare l'interfaccia di rete dalla quale si vogliono catturare i pacchetti in transito. Questa operazione attiverà la scheda in modalità “promiscua”, 
+cioè la renderà capace di intercettare tutti i pacchetti in transito sulla rete e non solo quelli destinati all'host. 
 
 
 .. image:: images/wireshark_NIC_selection.jpg

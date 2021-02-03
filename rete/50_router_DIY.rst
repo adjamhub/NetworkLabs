@@ -4,7 +4,7 @@ Router fai da te *
 
 .. note::
 
-    Prerequisti: **Windows, Raspberry, linea di comando**
+    Prerequisti: **Putty. Linux: terminale**
     
     Argomenti trattati: **Protocolli IP, ICMP. Routing**
       
@@ -12,4 +12,4 @@ Router fai da te *
 .. Qui inizia il testo dell'esperienza
 
 
-Questo si riesce a fare solo in laboratorio... 
+Questo si riesce a fare solo in laboratorio... serve *Armando*...

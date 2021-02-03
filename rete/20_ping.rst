@@ -4,7 +4,7 @@ ping
 
 .. note::
 
-    Prerequisti: **Windows, command prompt**
+    Prerequisti: **Windows: command prompt. Linux, Mac: terminale**
     
     Argomenti trattati: **Indirizzamento IP**
       
@@ -127,4 +127,3 @@ oltre 80       ...
     
     La velocità della rete dipende da moltissimi fattori, tra cui: i siti che visitate, l'orario di utilizzo, l'hardware a disposizione,
     la connessione wifi vs cablata, etc...
-    

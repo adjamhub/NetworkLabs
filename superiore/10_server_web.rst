@@ -5,7 +5,7 @@ Sito web su Raspberry
 
 .. note::
 
-    Prerequisti: **Raspberry, terminale linux**
+    Prerequisti: **Linux: terminale**
     
     Argomenti trattati: **HTTP, URL**
     
@@ -24,9 +24,11 @@ oppure di implementare nuove specifiche opzionali, come il supporto per HTTP 2.0
 
 Per installare Apache, dobbiamo accedere ad un terminale e, dopo aver verificato che il sistema sia aggiornato, installare il software:
 
+
 .. code-block:: bash
 
     $ sudo apt install apache2
+
     
 Questa semplice istruzione si occupa di tutto, ovvero:
 
@@ -37,6 +39,7 @@ Questa semplice istruzione si occupa di tutto, ovvero:
 * abilita il servizio Apache per l'attivazione
 
 * attiva il servizio Apache
+
 
 Terminata l'esecuzione della linea di codice, si può procedere direttamente a testare il webserver! Per collegarsi ad esso, ci basta aprire il
 sito **http://localhost/** e vedere la pagina iniziale!
@@ -126,6 +129,4 @@ Per testare se tutto ha funzionato, basta scrivere una pagina, ad esempio **test
     ?>
 
 Ovviamente, per vedere il risultato, bisogna puntare il browser su **http://localhost/test.php**
-
-
 

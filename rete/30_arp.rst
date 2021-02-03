@@ -4,7 +4,7 @@ arp
 
 .. note::
 
-    Prerequisti: **Windows, command prompt**
+    Prerequisti: **Windows: command prompt, Linux, Mac: terminale**
     
     Argomenti trattati: **Protocolli IP, ARP**
       
@@ -70,11 +70,3 @@ Esercizio di comprensione
 
 
 Osserva quello che è cambiato nelle 3 visualizzazioni e conferma quanto abbiamo studiato.
-
-
-Con Wireshark
-=============
-
-Non hai bisogno di fare molto, se non attivare la cattura e filtrare il protocollo ARP: vedrai *fiumi di pacchetti* arp in movimento. 
-
-Prova a ripetere l'esercizio di comprensione con Wireshark attivo e individua la richiesta ARP che scaturisce dal punto (quale punto?) della sequenza di operazioni.

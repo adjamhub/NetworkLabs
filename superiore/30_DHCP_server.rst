@@ -4,7 +4,7 @@ DHCP Server *
 
 .. note::
 
-    Prerequisti: **Raspberry, terminale linux**
+    Prerequisti: **Linux: terminale**
     
     Argomenti trattati: **DHCP, DNS, Indirizzamento IP**
       
@@ -13,12 +13,7 @@ DHCP Server *
 
 
 
-Installiamo un server DHCP su RPI. 
+Installiamo un server DHCP su RPI/linux. 
 
-Sinceramente non so quale è più semplice/utile/importante fare...
+* KEA DHCP Server
 
-* DHCPD
-* DNSMASQ
-* KEA
-
-Gli ultimi 2 vanno abbinati al DNS... mumble mumble...

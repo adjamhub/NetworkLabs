@@ -18,6 +18,20 @@ Esperienze di laboratorio
     in ogni pagina in basso (Version: AnnoMeseGiorno).
 
 
+Il primo capitolo è dedicato all'installazione e alla comprensione di alcuni strumenti che utilizzeremo nel corso delle lezioni. 
+Gli altri sono suddivisi per macroargomenti sulle esperienze di laboratorio che ho progettato.
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tools
+
+   tools/10_virtualbox
+   tools/20_ubuntu
+   tools/30_putty
+
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Livello di Rete
