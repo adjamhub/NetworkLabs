@@ -3,7 +3,7 @@
 @import 'theme.css';       /* for the Read the Docs theme */
 
 /* Allarga lo spazio del contenuto */
-.wy-nav-content {max-width:900px}
+.wy-nav-content {max-width:1200px}
 
 /* colore di sfondo dei riquadri di codice */
 .highlight {background:#efeffc}

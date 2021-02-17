@@ -28,7 +28,7 @@ Gli altri sono suddivisi per macroargomenti sulle esperienze di laboratorio che 
 
    tools/10_virtualbox
    tools/20_ubuntu
-   tools/30_putty
+   tools/30_remote
 
 
 
