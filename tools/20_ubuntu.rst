@@ -18,7 +18,17 @@ Ubuntu Server non è altro che una versione di Ubuntu (https://www.ubuntu.com) i
 stessa del sistema operativo opzioni riguardanti l'installazione di software comuni per le reti quali un server HTTP, un server DNS, un server DHCP, un server SSH, etc...
 
 
-... qui ci va qualcosa fino a ...
+Installazione
+=============
+
+Per l'installazione di Ubuntu su VirtualBox dovete creare una macchina virtuale con VirtualBox, caricare la ISO di Ubuntu come se fosse un CD e poi avviare l'installazione.
+
+Se avete bisogno di aiuto potete seguire la guida ufficiale di Ubuntu: https://ubuntu.com/tutorials/install-ubuntu-server#1-overview
+
+Buon lavoro!
+
+Al termine dell'installazione potete approfondire i seguenti prossimi argomenti.
+
 
 
 Il terminale Linux
