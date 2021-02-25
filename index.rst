@@ -38,6 +38,7 @@ Gli altri sono suddivisi per macroargomenti sulle esperienze di laboratorio che 
 
    rete/10_ipconfig
    rete/11_ifconfig_ip
+   rete/15_networking
    rete/20_ping
    rete/30_arp
    rete/40_traceroute
