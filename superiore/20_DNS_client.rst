@@ -30,8 +30,8 @@ Il client nslookup può essere eseguito in due modalità:
 #. interactive mode
 
 
-command line mode
-=================
+nslookup: command line mode
+===========================
 
 Questa modalità è la più semplice e scarna. Si digita **nslookup HOST** e questi ritorna la risoluzione (i record A, AAAA e CNAME presenti) dell'host
 fornito e termina
@@ -52,8 +52,8 @@ fornito e termina
 Come si vede, in *command line mode* nslookup restituisce una risposta standard contentente il server che ha fatto la risoluzione (un server non autorevole, come vediamo sotto) e le risoluzioni trovate, evidentemente, in questo caso, un record A e un record AAAA.
 
 
-interactive mode
-================
+nslookup: interactive mode
+==========================
 
 
 Per entrare in *interactive mode* basta digitare **nslookup** senza parametri od opzioni. In questo modo cambia il prompt (diventa un maggiore, **>**) e
@@ -171,3 +171,22 @@ essere risolto per ottenere l'indirizzo IP.
     Non-authoritative answer:
     Name:   smtp-in.libero.it
     Address: 213.209.1.129
+
+
+Web clients
+===========
+
+
+Capita spesso di voler utilizzare il DNS non tanto per verificare il funzionamento di un server, ma per verificare l'effettiva risolvibilità di un sito web. In questo caso
+tornano utili alcuni client DNS implementati direttamente come servizi WEB. Ne cito alcuni, ritrovati rigorosamente nella prima pagina del mio motore di ricerca preferito
+all'input *DNS web clients*:
+
+* https://www.whatsmydns.net/
+
+  Esso è un sito che permette di specificare una stringa di ricerca, un tipo di record ed effettua la stessa ricerca su una serie di almeno 20 server DNS sparsi per il mondo.
+  È un servizio molto comodo e interessante, nel caso si voglia studiare la propagazione di un certo nome di dominio.
+
+* https://toolbox.googleapps.com/apps/dig/
+
+  Rappresente la versione web del famoso client testuale *dig*, sviluppato al server *BIND*, il server web più famoso al mondo. Poco da dire e facile da usare. Molto completo
+  nelle risposte (troppo per noi?), ma molto semplice da utilizzare nella sua interfaccia web.

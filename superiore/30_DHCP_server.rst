@@ -20,7 +20,7 @@ essere un RaspberryPi oppure una installazione di Ubuntu Server.
 Se avete studiato il protocollo DHCP, sapete che per far funzionare un server DHCP c'è bisogno di un dispositivo
 con un indirizzo statico. Il capitolo sul **Networking** spiega come ottenere questo risultato.
 
-Il server DHCP che andiamo ad installare si chiama KEA (https://www.isc.org/kea/).
+Il server DHCP che andiamo ad installare si chiama **KEA** (https://www.isc.org/kea/).
 KEA è un server DHCP open source sviluppato dall'Internet Systems Consortium come (futuro)
 sostituto dello storico *ISC DHCP SERVER*. Se volete saperne di più... 
 leggete dal sito che ho linkato o guardate Wikipedia ;)
@@ -34,7 +34,7 @@ dopo un aggiornamento generale dei pacchetti installati, ci basterà fare un sem
     $ sudo apt install kea-dhcp4-server
     
 
-Il file di configurazione dello stesso si trovano nella directory */etc/kea*.
+Il file di configurazione dello stesso si trova nella directory */etc/kea*.
 Noi dobbiamo modificare il file *kea-dhcp4.conf*. Poiché in esso trovate una marea di commenti e spiegazioni
 a tutti i parametri possibili e immaginabili, ho provato a scriverne una versione *light*, mettendo in evidenza
 SOLO i parametri importanti o indispensabili
